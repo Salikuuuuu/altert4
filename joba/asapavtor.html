@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachiee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #778899;
+            padding: 20px;
+            color: white;
+        }
+
+        .header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .track-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .track-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .track-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .track-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .track-card h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .footer {
+            background-color: #5d6d7e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <img src="asaaaaap.jpg" alt="Kendrick Lamar">
+        <h1>A$AP Rocky</h1>
+    </header>
+
+    <section class="track-list">
+        <div class="track-card">
+            <img src="asasp.jfif" alt="tv off">
+            <h3>I Smoked Away My Brain</h3>
+            <audio controls>
+                <source src="C:\Users\juban\Desktop\Ishanova Joba'\joba\music\tvoff.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудиоплеер.
+            </audio>
+        </div>
+
+        <div class="track-card">
+            <img src="sun.jfif" alt="United in Grief">
+            <h3>Sundress</h3>
+            <audio controls>
+                <source src="C:\Users\juban\Desktop\Ishanova Joba'\joba\music\Kendrick Lamar United In Grief.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудиоплеер.
+            </audio>
+        </div>
+
+        <div class="track-card">
+            <img src="thelo.jfif" alt="m.A.A.d city">
+            <h3>Praise the Lord (Da Shine)</h3>
+            <audio controls>
+                <source src="C:\Users\juban\Desktop\Ishanova Joba'\joba\music\pride.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудиоплеер.
+            </audio>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Cachiee. All rights reserved. <a href="https://example.com">Official Website</a></p>
+    </footer>
+
+
+</body>
+</html>

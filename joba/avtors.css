@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #708090;
+    --button-bg: #f0f0f0;
+    --button-icon: "🌙"; 
+}
+
+.dark-theme {
+    --bg-color: #708090;
+    --text-color: #ffffff;
+    --button-bg: #333;
+    --button-icon: "☀️";
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--button-bg);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+#theme-toggle .icon {
+    display: block;
+    transition: transform 0.3s;
+}
+
+.artists-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.artist-card {
+    width: 200px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.artist-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.artist-card:hover img {
+    opacity: 0.8;
+}
+
+.artist-info {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 2px solid #e0e0e0;
+    border-radius: 0 0 15px 15px;
+}
+
+.artist-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.play-button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color:#708090;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.play-button:hover {
+    background-color: #708090;
+    transform: translateY(-2px); 
+}
+
+body.dark-theme .artist-card {
+    background-color: #444;
+}
+
+body.dark-theme .play-button {
+    background-color: #708090;
+}
+
+body.dark-theme .play-button:hover {
+    background-color: #708090;
+}
+
+button:focus, .play-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button:active, .play-button:active {
+    transform: translateY(2px);
+}
+
+

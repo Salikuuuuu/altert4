@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachiee</title>
+    <link rel="stylesheet" href="hom1.css"drct>
+</head>
+<body>
+    <header class="header">
+        <h1>Cachiee <img src="icons8-music-stop-24.png" alt="Music Icon"></h1>
+        <input type="text" id="searchInput" placeholder="Поиск песен, исполнителей...">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="ti2.html">Плейлисты</a></li>
+            <li><a href="avtors.html">Исполнители</a></li>
+            <li><a href="regai.html">Регистрация</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h2>Популярные</h2>
+        <div class="playlist-container">
+            <button class="scroll-btn scroll-left">&#9665;</button>
+            <div class="playlist">
+                <div class="playlist-item">
+                    <img src="asaa.jpg" alt="LONG. LIVE-A$AP Rocky">
+                    <h4>F**king Problems</h4>
+                    <p>LONG. LIVE-A$AP Rocky</p>
+                    <div class="audio-player">
+                        <button class="play-btn">▶</button>
+                        <div class="audio-progress"><div class="audio-progress-bar"></div></div>
+                        <span class="audio-time">0:00 / 3:45</span>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <img src="tk.jpg" alt="Tay-K">
+                    <h4>The Race</h4>
+                    <p>Tay-K</p>
+                    <div class="audio-player">
+                        <button class="play-btn">▶</button>
+                        <div class="audio-progress"><div class="audio-progress-bar"></div></div>
+                        <span class="audio-time">0:00 / 2:30</span>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn scroll-right">&#9655;</button>
+        </div>
+    </div>
+    <h2>Исполнители</h2>
+    <div class="artists-container">
+        <div class="artist-item">
+            <img src="lamar.jpg" alt="Kendrick Lamar">
+            <a href="#">Kendrick Lamar</a>
+        </div>
+        <div class="artist-item">
+            <img src="carti.jpg" alt="Playboi Carti">
+            <a href="#">Playboi Carti</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cachiee.com \ All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.querySelector('.scroll-left').addEventListener('click', () => {
+            document.querySelector('.playlist').scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        document.querySelector('.scroll-right').addEventListener('click', () => {
+            document.querySelector('.playlist').scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.play-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                let audio = this.parentElement.querySelector('audio');
+                if (audio.paused) {
+                    audio.play();
+                    this.textContent = '❚❚';
+                } else {
+                    audio.pause();
+                    this.textContent = '▶';
+                }
+            });
+        });
+        <audio controls>
+                        <source src="asap.mp3" type="audio/mpeg">
+                    </audio>
+    </script>
+</body>
+</html>

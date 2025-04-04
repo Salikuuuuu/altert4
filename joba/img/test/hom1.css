@@ -1,0 +1,51 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #778899;
+    color: white;
+}
+
+/* Стили аудиоплеера */
+.audio-player {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.play-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    color: #1DB954;
+}
+
+.audio-progress {
+    flex: 1;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.audio-progress-bar {
+    height: 100%;
+    background: #1DB954;
+    width: 0%;
+    border-radius: 2px;
+    transition: width 0.2s ease;
+}
+
+.audio-time {
+    font-size: 12px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Spotify</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #778899;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        input, select, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .social-login {
+            background-color: #fff;
+            color: black;
+            font-weight: bold;
+        }
+        .register {
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+        }
+        .register:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<style>
+    
+    .home-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #778899; 
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none; 
+        position: absolute;
+        top: 10px; 
+        left: 10px; 
+        transition: background-color 0.3s ease;
+    }
+
+    
+    .home-button i {
+        margin-right: 8px; 
+    }
+
+    
+    .home-button:hover {
+        background-color: #778899; 
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+
+<a href="file:///C:/Users/juban/Desktop/Ishanova%20Joba1/Ishanova%20Joba'/Ishanova%20Joba'/joba/ti1.html" class="home-button">
+    <i class="fas fa-home"></i> Главная
+</a>
+<body>
+    <div class="container">
+        <h1>Зарегистрируйтесь бесплатно</h1>
+        <button class="social-login google">Войти через Google</button>
+        <button class="social-login facebook">Войти через Facebook</button>
+        <hr>
+        <form>
+            <label for="email">Введите ваш email</label>
+            <input type="email" id="email" required>
+            
+            <label for="password">Создайте пароль</label>
+            <input type="password" id="password" required>
+            
+            <label for="username">Как к вам обращаться?</label>
+            <input type="text" id="username" required>
+            
+            <label for="birthdate">Дата рождения</label>
+            <input type="date" id="birthdate" required>
+            
+            <label for="gender">Пол</label>
+            <select id="gender">
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+                <option value="other">Другой</option>
+            </select>
+            
+            <button type="submit" class="register">Зарегистрироваться</button>
+        </form>
+    </div>
+</body>
+</html>
