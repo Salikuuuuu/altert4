@@ -15,9 +15,10 @@
     <nav>
         <ul>
             <li><a href="#home">Главная</a></li>
-            <li><a href="file:///C:/Users/juban/Desktop/ishanovajoba/joba/ti2.html">Плейлисты</a></li>
-            <li><a href="file:///C:/Users/juban/Desktop/Ishanova%20Joba1/Ishanova%20Joba'/Ishanova20Joba/joba/avtors.html">Исполнители</a></li>
-            <li><a href="file:///C:/Users/juban/Desktop/Ishanova%20Joba1/Ishanova%20Joba'/Ishanova20Joba/joba/regai.html">Регистрация</a></li>
+            <li><a href="library.html">Библиотека</a></li>
+            <li><a href="ti2.html">Плейлисты</a></li>
+            <li><a href="avtors.html">Исполнители</a></li>
+            <li><a href="regai.html">Регистрация</a></li>
         </ul>
     </nav>
 
@@ -30,86 +31,137 @@
                     <img src="asaa.jpg" alt="LONG. LIVE-A$AP Rocky">
                     <h4>F**king Problems</h4>
                     <p>A$AP Rocky</p>
-                   
+                    <div class="button-container">
+                    <button class="add-btn" onclick="addToLibrary('Asap Rocky - Fucking Problems.mp3', 'F**king Problems', 'A$AP Rocky', 'asaa.jpg')">+</button>
+                    <button class="play-btn" onclick="playSong('Asap Rocky - Fucking Problems.mp3', this, 'F**king Problems', 'A$AP Rocky', 'asaa.jpg')">▶</button>
                 </div>
-             
+                </div>
+
                 <div class="playlist-item">
                     <img src="mag.jpg" alt="Playboi Carti">
                     <h4>Magnolia</h4>
                     <p>Playboi Carti</p>
-                   
+                    <div class="button-container">
+                        <button class="add-btn" onclick="addToLibrary('magnolia.mp3', 'Magnolia', 'Playboi Carti', 'mag.jpg')">+</button>
+                        <button class="play-btn" onclick="playSong('magnolia.mp3', this, 'Magnolia', 'Playboi Carti', 'mag.jpg')">▶</button>
+                    </div>
                 </div>
+
                 <div class="playlist-item">
                     <img src="not.jpg" alt="Kendrick Lamar">
                     <h4>Not Like Us</h4>
                     <p>Kendrick Lamar</p>
-                   
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('not_like_us.mp3', this, 'Not Like Us', 'Kendrick Lamar', 'not.jpg')">▶</button>
+                    </div>
                 </div>
+
                 <div class="playlist-item">
-                    <img src="sqvoz.jpg" alt="Tay-K">
+                    <img src="sqvoz.jpg" alt="SQVOZ BAB">
                     <h4>Tokyo</h4>
                     <p>SQVOZ BAB</p>
-                    
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('tokyo.mp3', this, 'Tokyo', 'SQVOZ BAB', 'sqvoz.jpg')">▶</button>
+                    </div>
+                </div>
+
+                <div class="playlist-item">
+                    <img src="feri.jpg" alt="Frank Ocean">
+                    <h4>White Ferrari</h4>
+                    <p>Frank Ocean</p>
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('white_ferrari.mp3', this, 'White Ferrari', 'Frank Ocean', 'feri.jpg')">▶</button>
+                    </div>
+                </div>
+
+                <div class="playlist-item">
+                    <img src="girl.jfif" alt="lana">
+                    <h4>Cinnamon Girl</h4>
+                    <p>Lana Del Ray</p>
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('Lana Del Rey - Cinnamon Girl.mp3', this, 'Cinnamon Girl', 'Lana Del Ray', 'girl.jfif')">▶</button>
+                    </div>
                 </div>
                 <div class="playlist-item">
-                  <img src="feri.jpg" alt="Kendrick Lamar">
-                  <h4>White Ferari</h4>
-                  <p>Franck Ocean</p>
-                  
-              </div>
-              <div class="playlist-item">
-                <img src="feelit.jpg" alt="D4VD">
-                <h4>Feel it</h4>
-                <p>D4VD </p>
-                
-            </div>
-            <div class="playlist-item">
-                <img src="skai.jpg" alt="carti">
-                <h4>八方来财·因果</h4>
-                <p>揽佬SKAI ISYOURGOD</p>
-                
-            </div>
-            <div class="playlist-item">
-                <img src="iami.png" alt="carti">
-                <h4> EVIL JORDAN</h4>
-                <p>Playboi Carti</p>
-                
-            </div>
-            <div class="playlist-item">
-                <img src="tk.jpg" alt="Tay-K">
-                <h4><a href="file:///C:/Users/juban/Desktop/Ishanova%20Joba'/joba/regai.html"> Race</a></h4>
-                <p>Tay-K</p>
-                
-            </div>
+                    <img src="feel.jfif" alt="D4VD">
+                    <h4>Feel It</h4>
+                    <p>D4VD</p>
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('feel_it.mp3', this, 'Feel It', 'D4VD', 'feel.jfif')">▶</button>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <img src="iami.png" alt="Playboi Carti">
+                    <h4>EVIL JORDAN</h4>
+                    <p>Playboi Carti</p>
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('evil_jordan.mp3', this, 'EVIL JORDAN', 'Playboi Carti', 'iami.png')">▶</button>
+                    </div>
+                </div>
+
+                <div class="playlist-item">
+                    <img src="skai.jpg" alt="SKAI ISYOURGOD">
+                    <h4>八方来财·因果</h4>
+                    <p>揽佬SKAI ISYOURGOD</p>
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('skai.mp3', this, '八方来财·因果', '揽佬SKAI ISYOURGOD', 'skai.jpg')">▶</button>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <img src="asaa.jpg" alt="SKAI ISYOURGOD">
+                    <h4>Fashion Killa</h4>
+                    <p>A$AP Rocky</p>
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('fashionkilla.mp3')">▶</button>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <img src="tk.jpg" alt="Tay-K">
+                    <h4>Race</h4>
+                    <p>Tay-K</p>
+                    <div class="button-container">
+                        <button class="play-btn" onclick="playSong('race.mp3', this, 'Race', 'Tay-K', 'tk.jpg')">▶</button>
+                    </div>
+                </div>
             </div>
             <button class="scroll-btn scroll-right">&#9655;</button>
         </div>
     </div>
+
     <h2>Исполнители</h2>
-<div class="artists-container">
-    <div class="artist-item">
-        <img src="lamar.jpg" alt="Kendrick Lamar">
-        <a href="file:///C:/Users/admin/Desktop/Ishanova%20Joba'/Ishanova%20Joba'/joba/avtorlamar.html">Kendrick Lamar</a>
-    </div>
-    <div class="artist-item">
-        <img src="ellis.jpg" alt="Billie Eilish">
-        <a href="file:///C:/Users/admin/Desktop/Ishanova%20Joba'/Ishanova%20Joba'/joba/ellish.html">Billie Eilish</a>
-    </div>
-    <div class="artist-item">
-        <img src="weekend.jpg" alt="The Weeknd">
-        <a href="file:///C:/Users/admin/Desktop/Ishanova%20Joba'/Ishanova%20Joba'/joba/avtorweekend.html">The Weeknd</a>
-    </div>
-    <div class="artist-item">
-        <img src="carti.jpg" alt="Playboi Carti">
-        <a href="file:///C:/Users/admin/Desktop/Ishanova%20Joba'/Ishanova%20Joba'/joba/avtorcarti.html">Playboi Carti</a>
-    </div>
-    <div class="artist-item">
-        <img src="asaa.jpg" alt="A$AP Rocky">
-        <a href="file:///C:/Users/admin/Desktop/Ishanova%20Joba'/Ishanova%20Joba'/joba/asapavtor.html">A$AP Rocky</a>
-    </div>
-    <div class="artist-item">
-        <img src="nei.png" alt="The Neighbourhood">
-        <a href="file:///C:/Users/admin/Desktop/Ishanova%20Joba'/Ishanova%20Joba'/joba/avtorneig.html">The Neighbourhood</a>
+    <div class="artists-container-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollArtists('left')">&#9664;</button>
+        <div class="artists-container">
+            <div class="artist-item">
+                <img src="lamar.jpg" alt="Kendrick Lamar">
+                <a href="avtorlamar.html">Kendrick Lamar</a>
+            </div>
+            <div class="artist-item">
+                <img src="ellis.jpg" alt="Billie Eilish">
+                <a href="ellish.html">Billie Eilish</a>
+            </div>
+            <div class="artist-item">
+                <img src="weekend.jpg" alt="The Weeknd">
+                <a href="avtorweekend.html">The Weeknd</a>
+            </div>
+            <div class="artist-item">
+                <img src="carti.jpg" alt="Playboi Carti">
+                <a href="avtorcarti.html">Playboi Carti</a>
+            </div>
+            <div class="artist-item">
+                <img src="asaa.jpg" alt="A$AP Rocky">
+                <a href="asapavtor.html">A$AP Rocky</a>
+            </div>
+            <div class="artist-item">
+                <img src="nei.png" alt="The Neighbourhood">
+                <a href="avtorneig.html">The Neighbourhood</a>
+            </div>
+            <div class="artist-item">
+                <img src="peep.jfif" alt="Lil Peep">
+                <a href="peepavt.html">Lil Peep</a>
+            </div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollArtists('right')">&#9654;</button>
     </div>
 
     <footer class="footer">
@@ -160,115 +212,18 @@
         </div>
     </footer>
     
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-    
-        .main-content {
-            flex: 1;
-        }
-    
-        .artists-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 160px;
-            padding: 20px;
-        }
-    
-        .artist-item {
-            text-align: center;
-        }
-    
-        .artist-item img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-    
-        .artist-item a {
-            display: block;
-            margin-top: 10px;
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-        }
-    
-        .artist-item a:hover {
-            text-decoration: underline;
-        }
-    
-        .footer {
-            background-color: #5d6d7e;
-            color: #fff;
-            padding: 40px 20px;
-            width: 100%;
-        }
-    
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    
-        .footer-column h4 {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-    
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-    
-        .footer-column ul li {
-            margin-bottom: 8px;
-        }
-    
-        .footer-column ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-        }
-    
-        .footer-column ul li a:hover {
-            text-decoration: underline;
-        }
-    
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-            border-top: 1px solid #444;
-            padding-top: 20px;
-        }
-    
-        .social-icons a {
-            margin-left: 10px;
-        }
-    
-        .social-icons img {
-            width: 20px;
-            height: 20px;
-        }
-    </style>
-        <script>
-        document.querySelector('.scroll-left').addEventListener('click', () => {
-            document.querySelector('.playlist').scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        document.querySelector('.scroll-right').addEventListener('click', () => {
-            document.querySelector('.playlist').scrollBy({ left: 300, behavior: 'smooth' });
-        });
-    </script>
+    <div id="player" class="player">
+        <div class="player-info">
+            <img id="player-img" src="" alt="Track Cover" />
+            <div>
+                <h4 id="player-title">No Track Playing</h4>
+                <p id="player-artist"></p>
+            </div>
+        </div>
+        <input id="seek-bar" type="range" min="0" max="100" value="0" step="1" oninput="seekTrack()" />
+        <button id="player-btn" class="play-btn" onclick="togglePlayer()">▶</button>
+    </div>
+<script src="ti1.js"></script>
 </body>
 </html>
 

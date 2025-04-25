@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vsva/av</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+        .header {
+            position: relative;
+            background: url('maxresdefault.jpg') no-repeat center center/cover; /* Убедитесь, что путь к изображению верный */
+            height: 300px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .header h1 {
+            font-size: 56px;
+            margin: 0;
+            color: #fff;
+            z-index: 1;
+        }
+        .play-button {
+            background-color: #666;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .play-button:hover {
+            background-color: #fff;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный слой для затемнения */
+            z-index: 0;
+        }
+        .popular, .releases {
+            padding: 20px;
+        }
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .section-title h2 {
+            margin: 0;
+        }
+        .section-title a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .track-list {
+            display: flex;
+            flex-direction: column-reverse; /* Переворачивает порядок треков */
+            gap: 10px; /* Расстояние между треками */
+        }
+        .track, .release {
+            background: #181818;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1 1 calc(50% - 10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .track img, .release img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .track-info, .release-info {
+            margin-left: 10px;
+            flex: 1;
+        }
+        .track-info h3, .release-info h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .track-info p, .release-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>V $ X V PRiNCE</h1>
+        <button class="play-button">Слушать</button>
+    </div>
+    <div class="popular">
+        <div class="section-title">
+            <h2>Популярное</h2>
+            <a href="#">Показать все</a>
+        </div>
+        <div class="track-list">
+            <div class="track">
+                <img src="shara.jfif" alt="ШАРАУТ">
+                <div class="track-info">
+                    <h3>ШАРАУТ</h3>
+                    <p>Гуд, BALLER, V $ X V PRiNCE</p>
+                </div>
+                <span>3:12</span>
+            </div>
+            <div class="track">
+                <img src="novyi.jfif" alt="Дом 50">
+                <div class="track-info">
+                    <h3>Дом 50 [Imanbek Remix]</h3>
+                    <p>V $ X V PRiNCE feat. Кисло-Сладкий & Bollo</p>
+                </div>
+                <span>1:59</span>
+            </div>
+            <div class="track">
+                <img src="bigcity.jpg" alt="Дом 50">
+                <div class="track-info">
+                    <h3>Big City Life</h3>
+                    <p>V $ X V PRiNCE & De Lacure</p>
+                </div>
+                <span>4:24</span>
+            </div>
+            <div class="track">
+                <img src="novyi.jfif" alt="Дом 50">
+                <div class="track-info">
+                    <h3>Мурашки</h3>
+                    <p>V $ X V PRiNCE</p>
+                </div>
+                <span>2:54</span>
+            </div>
+         
+    </div>
+    <div class="releases">
+        <div class="section-title">
+            <h2>Релизы</h2>
+            <a href="#">Показать все</a>
+        </div>
+        <div class="release-list">
+            <div class="release">
+                <img src="satpaeva.jpg" alt="Сатпаева 32">
+                <div class="release-info">
+                    <h3>Сатпаева 32</h3>
+                    <p>V $ X V PRiNCE, BOLLO</p>
+                </div>
+            </div>
+            <div class="release">
+                <img src="release2.jpg" alt="Вертолёт">
+                <div class="release-info">
+                    <h3>Вертолёт</h3>
+                    <p>V $ X V PRiNCE, AYRYS</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

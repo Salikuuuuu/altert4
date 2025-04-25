@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feelzmf</title>
+<link rel="stylesheet" href="fmus.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <h1>Feelz</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="library.html">Библиотека</a></li>
+                <li><a href="ti2.html">Плейлисты</a></li>
+                <li><a href="avtors.html">Исполнители</a></li>
+                <li><a href="regai.html">Регистрация</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <input type="text" id="searchInput" placeholder="Search songs, artists...">
+        </div>
+    </header>
+
+    <main>
+        <section class="hot-artists">
+            <h2>Артисты</h2>
+            <div class="show-all-container">
+            <button class="show-all-btn" onclick="window.location.href='artist.html'">Показать все</button>
+            <div class="artist-carousel">
+                <a href="avtorlamar.html" class="artist-item">
+                    <img src="lamar.jpg" alt="Kendrick Lamar">
+                    <p>Kendrick Lamar</p>
+                </a>
+                <a href="ellish.html" class="artist-item">
+                    <img src="ellis.jpg" alt="Billie Eilish">
+                    <p>Billie Eilish</p>
+                </a>
+                <a href="avtorweekend.html" class="artist-item">
+                    <img src="weekend.jpg" alt="The Weeknd">
+                    <p>The Weeknd</p>
+                </a>
+                <a href="avtorcarti.html" class="artist-item">
+                    <img src="carti.jpg" alt="The Weeknd">
+                    <p>Playboi Carti</p>
+                </a>
+                <a href="asapavtor.html" class="artist-item">
+                    <img src="asaaaaap.jpg" alt="The Weeknd">
+                    <p>A$AP Rocky</p>
+                </a>
+                <a href="lanaavtor.html" class="artist-item">
+                    <img src="delrey.jfif" alt="The Weeknd">
+                    <p>Lana Del Rey</p>
+                </a>
+                <a href="avtorneig.html" class="artist-item">
+                    <img src="nei.png" alt="The Weeknd">
+                    <p>The Neighbourhood</p>
+                </a>
+                <a href="chase.html" class="artist-item">
+                    <img src="atlant.jfif" alt="The Weeknd">
+                    <p>Chase Atlantic</p>
+                </a>
+                <a href="juzz.html" class="artist-item">
+                    <img src="juzz.jfif" alt="The Weeknd">
+                    <p>Darhan Juzz</p>
+                </a>
+                <a href="tyler.html" class="artist-item">
+                    <img src="chromo.jpg" alt="The Weeknd">
+                    <p>Tyler, The Creator</p>
+                </a>
+            </div>
+        </section>
+        <section class="new-releases">
+            <h2>Больше того, что вам нравится</h2>
+            <div class="show-all-container">
+                <button class="show-all-btn" onclick="window.location.href='all-mixes.html'">Показать все</button>
+            <div class="playlist-carousel">
+                <div class="playlist-item">
+                    <img src="night.png" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('The Kid LAROI - Nights Like This.mp3', 'NIGHTS LIKE THIS', 'The Kid LAROI', 'night.png')">♥</button>
+                        <button class="play-btn" onclick="playSong('The Kid LAROI - Nights Like This.mp3', this, 'NIGHTS LIKE THIS', 'The Kid LAROI', 'night.png')">▶</button>
+                    </div>
+                    <h4>NIGHTS LIKE THIS</h4>
+                    <p>The Kid LAROI</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="asaa.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('fashionkilla.mp3', 'Fashion Killa', 'A$AP Rocky', 'asaa.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('fashionkilla.mp3', this, 'Fashion Killa', 'A$AP Rocky', 'asaa.jpg')">▶</button>
+                    </div>
+                    <h4>Fashion Killa</h4>
+                    <p>A$AP Rocky</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="girl.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('Lana Del Rey - Cinnamon Girl.mp3', 'Cinnamon girl', 'Lana del ray', 'girl.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('Lana Del Rey - Cinnamon Girl.mp3', this, 'Cinnamon girl', 'Lana del ray', 'girl.jfif')">▶</button>
+                    </div>
+                    <h4>Cinnamon girl</h4>
+                    <p>Lana del ray</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="sex.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('Lykke Li - Sex Money Feeling Die.mp3', 'sex money feelings die', 'Lekke Li', 'sex.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('Lykke Li - Sex Money Feeling Die.mp3', this, 'sex money feelings die', 'Lekke Li', 'sex.jfif')">▶</button>
+                    </div>
+                    <h4>sex money feelings die</h4>
+                    <p>Lekke Li</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="ChampagneCoast.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('Blood Orange - Champagne Coast.mp3', 'Champagne Coast', 'Blood Orange', 'ChampagneCoast.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('Blood Orange - Champagne Coast.mp3', this, 'Champagne Coast', 'Blood Orange', 'ChampagneCoast.jpg')">▶</button>
+                    </div>
+                    <h4>Champagne Coast</h4>
+                    <p>Blood Orange</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="maha.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'Mahabbatym', 'Moldanazar', 'maha.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'Mahabbatym', 'Moldanazar', 'maha.jfif')">▶</button>
+                    </div>
+                    <h4>Mahabbatym</h4>
+                    <p>Moldanazar</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="1dou.jfif" alt="Afro Vibes">
+                <div class="overlay">
+                    <button class="heart-btn" onclick="addToLibrary('Twenty One Pilots - Doubt.mp3', 'Doubt', 'Twenty One Pilots', '1dou.jfif')">♥</button>
+                    <button class="play-btn" onclick="playSong('Twenty One Pilots - Doubt.mp3', this, 'Doubt', 'Twenty One Pilots', '1dou.jfif')">▶</button>
+                </div>
+                <h4>Doubt</h4>
+                <p>Twenty One Pilots</p>
+            </div>
+            <div class="playlist-item">
+                <img src="nuts.jfif" alt="Afro Vibes">
+            <div class="overlay">
+                <button class="heart-btn" onclick="addToLibrary('Lil Peep feat. rainy bear - nuts.mp3', 'nuts', 'Lil Peep', 'nuts.jfif')">♥</button>
+                <button class="play-btn" onclick="playSong('Lil Peep feat. rainy bear - nuts.mp3', this, 'nuts', 'Lil Peep', 'nuts.jfif')">▶</button>
+            </div>
+            <h4>nuts</h4>
+            <p>Lil Peep</p>
+        </div>
+            </div>
+        </section>
+
+        <section class="new-releases">
+            <h2>Подборки лучших треков для вас </h2>
+            <div class="show-all-container">
+                <button class="show-all-btn" onclick="window.location.href='all-mixes.html'">Показать все</button>
+            <div class="playlist-carousel">
+                <div class="playlist-item">
+                    <img src="iami.png" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'EVIL JORDAN', 'Playboi Carti', 'iami.png')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'EVIL JORDAN', 'Playboi Carti', 'iami.png')">▶</button>
+                    </div>
+                    <h4>EVIL JORDAN</h4>
+                    <p>Playboi Carti </p>
+                </div>
+                <div class="playlist-item">
+                    <img src="oftg.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('fashionkilla.mp3', 'One of the girls', 'The Weeknd', 'oftg.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('fashionkilla.mp3', this, 'One of the girls', 'The Weeknd', 'oftg.jfif')">▶</button>
+                    </div>
+                    <h4>One of the girls</h4>
+                    <p>The Weeknd</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="unit.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('Lana Del Rey - Cinnamon Girl.mp3', 'United in Grief', 'Kendrick Lamar', 'unit.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('Lana Del Rey - Cinnamon Girl.mp3', this, 'United in Grief', 'Kendrick Lamar', 'unit.jpg')">▶</button>
+                    </div>
+                    <h4>United in Grief</h4>
+                    <p>Kendrick Lamar</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="sun.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'Sundress', 'A$AP Rocky', 'sun.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'Sundress', 'A$AP Rocky', 'sun.jfif')">▶</button>
+                    </div>
+                    <h4>Sundress</h4>
+                    <p>A$AP Rocky</p>
+                </div>
+                
+                <div class="playlist-item">
+                    <img src="chromo.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'Like Him', 'Tyler, the creater', 'chromo.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'Like Him', 'Tyler, the creater', 'chromo.jpg')">▶</button>
+                    </div>
+                    <h4>Like Him</h4>
+                    <p>Tyler, the creater</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="softcore.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'Softcore', 'The Neighbourhood', 'softcore.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'Softcore', 'The Neighbourhood', 'softcore.jpg')">▶</button>
+                    </div>
+                    <h4>Softcore</h4>
+                    <p>The Neighbourhood</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="lilm.jpg" alt="Afro Vibes">
+                <div class="overlay">
+                    <button class="heart-btn" onclick="addToLibrary('Lil Morty - I Am Cute.mp3', 'Cute', 'Lil Morty', 'lilm.jpg')">♥</button>
+                    <button class="play-btn" onclick="playSong('Lil Morty - I Am Cute.mp3', this, 'Cute', 'Lil Morty', 'lilm.jpg')">▶</button>
+                </div>
+                <h4>Cute</h4>
+                <p>Lil Morty</p>
+            </div>
+            <div class="playlist-item">
+                <img src="feelz.jpg" alt="Afro Vibes">
+            <div class="overlay">
+                <button class="heart-btn" onclick="addToLibrary('Lil Peep feat. rainy bear - nuts.mp3', 'feelz', 'Lil Peep', 'feelz.jpg')">♥</button>
+                <button class="play-btn" onclick="playSong('Lil Peep feat. rainy bear - nuts.mp3', this, 'feelz', 'Lil Peep', 'feelz.jpg')">▶</button>
+            </div>
+            <h4>feelz</h4>
+            <p>Lil Peep</p>
+        </div>
+            </div>
+        </section>
+
+        <section class="new-releases">
+            <h2>Лучшие альбомы </h2>
+            <div class="show-all-container">
+                <button class="show-all-btn" onclick="window.location.href='all-mixes.html'">Показать все</button>
+            <div class="playlist-carousel">
+                <div class="playlist-item">
+                    <img src="swim.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('fashionkilla.mp3', 'Chase Atlantic', 'Chase Atlantic', 'swim.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('fashionkilla.mp3', this, 'Chase Atlantic', 'Chase Atlantic', 'swim.jfif')">▶</button>
+                    </div>
+                    <h4>Chase Atlantic</h4>
+                    <p>Chase Atlantic</p>
+                </div>
+                    
+                <div class="playlist-item">
+                    <img src="tbrn.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('fashionkilla.mp3', 'TBRN', 'Darhan Juzz', 'tbrn.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('fashionkilla.mp3', this, 'TBRN', 'Darhan Juzz', 'tbrn.jpg')">▶</button>
+                    </div>
+                    <h4>TBRN</h4>
+                    <p>Darhan Juzz</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="ellis.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('Lana Del Rey - Cinnamon Girl.mp3', 'Hit Me Hard and Soft', 'Billie Eilish', 'ellis.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('Lana Del Rey - Cinnamon Girl.mp3', this, 'Hit Me Hard and Soft', 'Billie Eilish', 'ellis.jpg')">▶</button>
+                    </div>
+                    <h4>Hit Me Hard and Soft </h4>
+                    <p>Billie Eilish</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="almajazz.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'Алматинский джаз, Vol.3    ', 'M Dee', 'almajazz.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'Алматинский джаз, Vol.3', 'M Dee', 'almajazz.jfif')">▶</button>
+                    </div>
+                    <h4>Алматинский джаз, Vol.3</h4>
+                    <p>M'Dee</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="chromo.jpg" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'Like Him', 'Tyler, the creater', 'chromo.jpg')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'Like Him', 'Tyler, the creater', 'chromo.jpg')">▶</button>
+                    </div>
+                    <h4>CHROMOKOPIA</h4>
+                    <p>Tyler, the creater</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="fakeid.jfif" alt="Afro Vibes">
+                    <div class="overlay">
+                        <button class="heart-btn" onclick="addToLibrary('.mp3', 'Fake ID', 'Kizaru & ICEGERGERT', 'fakeid.jfif')">♥</button>
+                        <button class="play-btn" onclick="playSong('.mp3', this, 'Fake ID', 'Kizaru & ICEGERGERT', 'fakeid.jfif')">▶</button>
+                    </div>
+                    <h4>Fake ID</h4>
+                    <p>Kizaru & ICEGERGERT</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="novyi.jfif" alt="Afro Vibes">
+                <div class="overlay">
+                    <button class="heart-btn" onclick="addToLibrary('.mp3', 'NOVЫЙ', 'V$XV Prince', 'novyi.jfif')">♥</button>
+                    <button class="play-btn" onclick="playSong('.mp3', this, 'NOVЫЙ', 'V$XV Prince', 'novyi.jfif')">▶</button>
+                </div>
+                <h4>NOVЫЙ</h4>
+                <p>V$XV Prince</p>
+            </div>
+            <div class="playlist-item">
+                <img src="iami.png" alt="Afro Vibes">
+                <div class="overlay">
+                    <button class="heart-btn" onclick="addToLibrary('.mp3', 'EVIL JORDAN', 'Playboi Carti', 'iami.png')">♥</button>
+                    <button class="play-btn" onclick="playSong('.mp3', this, 'EVIL JORDAN', 'Playboi Carti', 'iami.png')">▶</button>
+                </div>
+                <h4>I AM MUSIC</h4>
+                <p>Playboi Carti </p>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Компания</h4>
+                <a href="#">О нас</a>
+                <a href="#">Вакансии</a>
+                <a href="#">For the Record</a>
+            </div>
+            <div class="footer-section">
+                <h4>Сообщества</h4>
+                <a href="#">Для исполнителей</a>
+                <a href="#">Для разработчиков</a>
+                <a href="#">Реклама</a>
+                <a href="#">Для инвесторов</a>
+                <a href="#">Для вендоров</a>
+            </div>
+            <div class="footer-section">
+                <h4>Полезные ссылки</h4>
+                <a href="#">Справка</a>
+                <a href="#">Бесплатное мобильное приложение</a>
+            </div>
+            <div class="footer-section">
+                <h4>Планы FeelzMF</h4>
+                <a href="#">Индивидуальная подписка</a>
+                <a href="#">Premium для двоих</a>
+                <a href="#">Premium для семьи</a>
+                <a href="#">Premium для студентов</a>
+                <a href="#">Бесплатная версия Cachee</a>
+            </div>
+        </div>
+        <p>&copy; 2025 Feelz AB</p>
+    </footer>
+    <div id="player-container">
+        <div id="player">
+            <img id="track-image" src="default.jpg" alt="Track Image">
+            <div id="track-info">
+                <h4 id="track-title">Название трека</h4>
+                <p id="track-artist">Исполнитель</p>
+            </div>
+            <audio id="audio-player" controls></audio>
+            <div id="controls">
+                <button id="prev-btn">⏮</button>
+                <button id="play-pause-btn">▶</button>
+                <button id="next-btn">⏭</button>
+            </div>
+        </div>
+    </div>
+    <script src="fmus.js"></script>
+    
+</body>
+</html>

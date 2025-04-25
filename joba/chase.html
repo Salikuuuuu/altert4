@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asap.fm</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+        .header {
+            position: relative;
+            background: url('atlant.jfif') no-repeat center center/cover; /* Убедитесь, что путь к изображению верный */
+            height: 300px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .header h1 {
+            font-size: 56px;
+            margin: 0;
+            color: #fff;
+            z-index: 1;
+        }
+        .play-button {
+            background-color: #666;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .play-button:hover {
+            background-color: #fff;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный слой для затемнения */
+            z-index: 0;
+        }
+        .popular, .releases {
+            padding: 20px;
+        }
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .section-title h2 {
+            margin: 0;
+        }
+        .section-title a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .track-list {
+            display: flex;
+            flex-direction: column-reverse; /* Переворачивает порядок треков */
+            gap: 10px; /* Расстояние между треками */
+        }
+        .track, .release {
+            background: #181818;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1 1 calc(50% - 10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .track img, .release img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .track-info, .release-info {
+            margin-left: 10px;
+            flex: 1;
+        }
+        .track-info h3, .release-info h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .track-info p, .release-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #666;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 10;
+        }
+        .home-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <a href="fmus.html" class="home-button">Главная</a>
+    <div class="header">
+        <h1>Chase Atlantic</h1>
+        <button class="play-button">Слушать</button>
+    </div>
+    <div class="popular">
+        <div class="section-title">
+            <h2>Популярное</h2>
+            <a href="#">Показать все</a>
+        </div>
+        <div class="track">
+            <img src="swim.jfif" alt="Дом 50">
+            <div class="track-info">
+                <h3>Swim</h3>
+                <p>Chase Atlantic</p>
+            </div>
+            <span>3:24</span>
+        </div>
+        <div class="track-list">
+            <div class="track">
+                <img src="swim.jfif" alt="ШАРАУТ">
+                <div class="track-info">
+                    <h3>Consume</h3>
+                    <p>Chase Atlantic</p>
+                </div>
+                <span>3:12</span>
+            </div>
+            <div class="track">
+                <img src="swim.jfif" alt="Дом 50">
+                <div class="track-info">
+                    <h3>into it </h3>
+                    <p>Chase Atlantic</p>
+                </div>
+                <span>1:59</span>
+            </div>
+            <div class="track">
+                <img src="friends.jfif" alt="Дом 50">
+                <div class="track-info">
+                    <h3>Friends </h3>
+                    <p>Chase Atlantic</p>
+                </div>
+                <span>4:24</span>
+            </div>
+           
+         
+    </div>
+    <div class="releases">
+        <div class="section-title">
+            <h2>Релизы</h2>
+            <a href="#">Показать все</a>
+        </div>
+        <div class="release-list">
+            <div class="release">
+                <img src="" alt="Сатпаева 32">
+                <div class="release-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="release">
+                <img src="release2.jpg" alt="Вертолёт">
+                <div class="release-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Добавьте остальные релизы -->
+        </div>
+    </div>
+</body>
+</html>

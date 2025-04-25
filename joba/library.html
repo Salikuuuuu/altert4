@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="test1.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .library-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            background-color: #1f1f1f;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .playlist-item:hover {
+            background-color: #333;
+        }
+
+        .playlist-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+
+        .playlist-item h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .playlist-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .playlist-item .play-btn {
+            margin-left: auto;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .playlist-item .play-btn:hover {
+            color: #ffffff;
+        }
+
+        .empty-message {
+            text-align: center;
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .stack-container {
+            position: fixed;
+            top: 10px; /* Расположить сверху */
+            right: 10px; /* Расположить справа */
+            display: flex;
+            flex-direction: row; /* Расположить кнопки в строку */
+            align-items: center; /* Выравнивание по вертикали */
+            gap: 10px; /* Расстояние между кнопками */
+            z-index: 1000; /* Убедитесь, что кнопки всегда сверху */
+        }
+
+        .stack-button {
+            width: 120px; /* Уменьшить ширину */
+            padding: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #5d6d7e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .stack-button:hover {
+            background-color: #4a5a6b;
+            color: #ffffff;
+        }
+
+        .delete-btn {
+            margin-left: 10px;
+            background: none;
+            border: none;
+            color: #ff4d4d;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .delete-btn:hover {
+            color: #ff1a1a;
+        }
+
+        .library-item {
+            display: flex;
+            align-items: center;
+            background-color: #1f1f1f;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .library-item:hover {
+            background-color: #333;
+        }
+
+        .library-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+
+        .track-info {
+            flex-grow: 1;
+        }
+
+        .track-info h4 {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .track-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #ff4d4d;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .delete-btn:hover {
+            color: #ff1a1a;
+        }
+
+        .empty-message {
+            text-align: center;
+            font-size: 18px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+        .feelz-logo {
+            position: absolute;
+            top: 20px; /* Расположить сверху */
+            left: 20px; /* Расположить слева */
+            font-size: 24px;
+            font-weight: bold;
+            color: #5d6d7e;
+        }
+        #player-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#player {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#track-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#track-info {
+    flex-grow: 1;
+}
+
+#track-title {
+    margin: 0;
+    font-size: 16px;
+}
+
+#track-artist {
+    margin: 0;
+    font-size: 14px;
+    color: #aaa;
+}
+#controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#controls button:hover {
+    color: #5d6d7e;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ваша Библиотека</h1>
+        <div class="feelz-logo">Feelz</div>
+    </header>
+    <main>
+        <div id="library-container">
+            <!-- Треки будут добавлены сюда через JavaScript -->
+        </div>
+    </main>
+    <div class="stack-container">
+        <button class="stack-button" onclick="window.location.href='fmus.html'">Домой</button>
+        <button class="stack-button" onclick="addNewItem()">Добавить трек</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const libraryKey = 'userLibrary';
+            const libraryContainer = document.getElementById('library-container');
+
+            // Получаем библиотеку из LocalStorage
+            const library = JSON.parse(localStorage.getItem(libraryKey)) || [];
+
+            if (library.length === 0) {
+                libraryContainer.innerHTML = '<p>Ваша библиотека пуста.</p>';
+            } else {
+                library.forEach(track => {
+                    const trackElement = document.createElement('div');
+                    trackElement.classList.add('library-item');
+                    trackElement.innerHTML = `
+                        <img src="${track.image}" alt="${track.title}">
+                        <div class="track-info">
+                            <h4>${track.title}</h4>
+                            <p>${track.artist}</p>
+                        </div>
+                        <audio controls src="${track.audioFile}"></audio>
+                        <button class="delete-btn" onclick="removeFromLibrary(${library.indexOf(track)})">X</button>
+                    `;
+                    libraryContainer.appendChild(trackElement);
+                });
+            }
+        });
+
+        function removeFromLibrary(index) {
+            const libraryKey = 'userLibrary';
+            let library = JSON.parse(localStorage.getItem(libraryKey)) || [];
+
+            // Удаляем трек по индексу
+            library.splice(index, 1);
+            localStorage.setItem(libraryKey, JSON.stringify(library));
+
+            // Обновляем отображение
+            alert('Трек успешно удалён из библиотеки.');
+            location.reload();
+        }
+
+        function addNewItem() {
+            const libraryKey = 'userLibrary';
+            let library = JSON.parse(localStorage.getItem(libraryKey)) || [];
+
+            // Проверяем, достигнут ли лимит
+            if (library.length >= 30) {
+                alert('Вы не можете добавить больше 30 треков в библиотеку.');
+                return;
+            }
+
+            const title = prompt('Введите название трека:');
+            const artist = prompt('Введите имя исполнителя:');
+            const audioFile = prompt('Введите URL аудиофайла:');
+            const image = prompt('Введите URL изображения:');
+
+            if (title && artist && audioFile && image) {
+                library.push({ title, artist, audioFile, image });
+                localStorage.setItem(libraryKey, JSON.stringify(library));
+
+                alert(`Трек "${title}" исполнителя "${artist}" добавлен в вашу библиотеку!`);
+                location.reload();
+            } else {
+                alert('Все поля обязательны для заполнения!');
+            }
+        }
+    </script>
+    <div id="player-container">
+        <div id="player">
+            <img id="track-image" src="default.jpg" alt="Track Image">
+            <div id="track-info">
+                <h4 id="track-title">Название трека</h4>
+                <p id="track-artist">Исполнитель</p>
+            </div>
+            <audio id="audio-player" controls></audio>
+            <div id="controls">
+                <button id="prev-btn">⏮</button>
+                <button id="play-pause-btn">▶</button>
+                <button id="next-btn">⏭</button>
+            </div>
+        </div>
+</body>
+</html>

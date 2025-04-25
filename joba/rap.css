@@ -71,9 +71,24 @@ body {
     border-radius: 5px;
 }
 
+.playlist-img {
+    width: 240px; /* Increased by 20% */
+    height: 240px; /* Increased by 20% */
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+}
+
 .now-playing {
     width: 20%;
     background-color: #181818;
     padding: 20px;
     text-align: center;
+}
+
+.now-playing-img {
+    width: 180px; /* Increased by 20% */
+    height: 180px; /* Increased by 20% */
+    object-fit: cover;
+    border-radius: 10px;
 }

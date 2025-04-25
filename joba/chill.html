@@ -1,60 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chill</title>
+  <meta charset="UTF-8">
+  <title>Мой плейлист №1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #000;
+      padding: 20px;
+    }
+
+    .main {
+      flex: 1;
+      background-color: #121212;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .playlist-header {
+      padding: 40px;
+      background: linear-gradient(to bottom, #333, #121212);
+    }
+
+    .playlist-title {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .playlist-meta {
+      color: #b3b3b3;
+      margin-top: 10px;
+    }
+
+    .search-box {
+      padding: 20px 40px;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px;
+      background-color: #2a2a2a;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .track-list {
+      padding: 0 40px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .track {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .track img {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+    }
+
+    .track .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .track .title {
+      font-weight: bold;
+    }
+
+    .track .artist {
+      font-size: 14px;
+      color: #b3b3b3;
+    }
+  </style>
 </head>
-<link rel="stylesheet" href="chill.css">
 <body>
-    <a href="file:///C:/Users/admin/Desktop/syrym4/06.03.25/ti1.html" class="btn-flip" data-back="Домой" data-front="Хочешь Домой?"></a>
-    <center>
-        <audio controls>
-            <source src="C:\Users\admin\Desktop\syrym4\06.03.25\Tay-K The Race.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-            
-          </audio>
-          <div class="playlist-item">
-            <img src="mag.jpg" alt="Album Cover">
-            <div>
-              <h4>Magnoila</h4>
-              <p>Playboy Carti</p>
-          <audio controls>
-            <source src="C:\Users\admin\Desktop\syrym4\06.03.25\Playboi Carti - Magnolia.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-            
-          </audio>
-          <div class="playlist-item">
-            <img src="not.jpg" alt="Album Cover">
-            <div>
-              <h4>Not like us</h4>
-              <p>Kendrick Lamar</p>
-          <audio controls>
-            <source src="C:\Users\admin\Desktop\syrym4\06.03.25\Kendrick Lamar - Not Like Us.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-            </audio>
-            <div class="playlist-item">
-              <img src="feri.jpg" alt="Album Cover">
-              <div>
-                <h4>White Ferari</h4>
-                <p>Franck Ocean</p>
-            <audio controls>
-              <source src="C:\Users\admin\Desktop\syrym4\06.03.25\Frank Ocean - White Ferrari (San Holo Remix).mp3" type="audio/mpeg">
-              Your browser does not support the audio element.
-              </audio>
-              <div class="playlist-item">
-                <img src="lilm.jpg" alt="Album Cover">
-                <div>
-                  <h4>I'm cute</h4>
-                  <p>LIL MORTY</p>
-              <audio controls>
-                <source src="C:\Users\admin\Desktop\syrym4\06.03.25\Lil Morty - I Am Cute.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-              </div>
-              </center>
+  <div class="sidebar">
+    <h3>Моя медиатека</h3>
+    <div class="playlist-item">Мой плейлист №1</div>
+  </div>
 
+  <div class="main">
+    <div class="playlist-header">
+      <div class="playlist-title">Мой плейлист №1</div>
+      <div class="playlist-meta">Mtroove • Плейлист</div>
+    </div>
 
-    
+    <div class="search-box">
+      <label>Давай добавим что-нибудь в твой плейлист</label>
+      <input type="text" id="searchInput" placeholder="Поиск треков и выпусков">
+    </div>
+
+    <div class="track-list" id="trackList">
+      <!-- Треки будут появляться здесь -->
+    </div>
+  </div>
+
+  <script>
+    const tracks = [
+      {
+        title: "Back To Me",
+        artist: "The Marías",
+        img: "https://i.scdn.co/image/ab67616d0000b273a8f6cbe10bc7bda1279747f0"
+      },
+      {
+        title: "Electric Feel",
+        artist: "MGMT",
+        img: "https://upload.wikimedia.org/wikipedia/en/8/84/MGMT_-_Electric_Feel.png"
+      },
+      {
+        title: "Summertime Sadness",
+        artist: "Lana Del Rey",
+        img: "https://upload.wikimedia.org/wikipedia/en/d/d5/Summertime_Sadness.png"
+      }
+    ];
+
+    const trackList = document.getElementById("trackList");
+    const searchInput = document.getElementById("searchInput");
+
+    function renderTracks(filteredTracks) {
+      trackList.innerHTML = "";
+      filteredTracks.forEach(track => {
+        const trackElement = document.createElement("div");
+        trackElement.className = "track";
+        trackElement.innerHTML = `
+          <img src="${track.img}" alt="${track.title}">
+          <div class="info">
+            <div class="title">${track.title}</div>
+            <div class="artist">${track.artist}</div>
+          </div>
+        `;
+        trackList.appendChild(trackElement);
+      });
+    }
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase();
+      const filtered = tracks.filter(track =>
+        track.title.toLowerCase().includes(query) ||
+        track.artist.toLowerCase().includes(query)
+      );
+      renderTracks(filtered);
+    });
+
+    // Первоначальный рендер
+    renderTracks(tracks);
+  </script>
 </body>
 </html>
